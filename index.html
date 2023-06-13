@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ 1+1 }}, the value of the count variable is: {{ count }}
+        <span 
+            :title="message" 
+            :class="isActive ? 'active' : '' ">Hover here</span>
+    
+        <p v-if="isActive">The user is active</p>
+        <p v-else>The user is inactive.</p>
+
+        <ul>
+            <li v-for="(item, i) in itemList" :key="i">{{ item }}</li>
+        </ul>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
